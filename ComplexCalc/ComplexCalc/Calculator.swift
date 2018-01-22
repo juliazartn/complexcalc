@@ -58,4 +58,20 @@ class Calculator {
         }
         return total / (args.count)
     }
+    
+    //input: 2 coordinates
+    //output: sum of coordinate in coordinate form
+    @discardableResult
+    public func add(lhs : (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        let x = lhs.0 + rhs.0
+        let y = lhs.1 + rhs.1
+        return (x, y)
+    }
+    
+    //input: 2 coordinates
+    //output: subtraction of coordinate in coordinate form
+    @discardableResult
+    public func subtract(lhs : (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        return (lhs.0 - rhs.0, lhs.1 - rhs.1)
+    }
 }
